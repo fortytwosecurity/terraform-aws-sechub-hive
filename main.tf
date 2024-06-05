@@ -125,7 +125,7 @@ module "thehive4py_layer" {
 
   layer_name          = "thehive4py-layer-local"
   description         = "Lambda layer containing thehive4py"
-  compatible_runtimes = ["python3.8"]
+  compatible_runtimes = ["python3.9"]
 
   create_package         = false
   local_existing_package = "${path.module}/layer.zip"
@@ -139,7 +139,7 @@ module "sechub_to_hive_lambda" {
   function_name  = "sechub-to-hive"
   description    = "function to send sechub findings to the hive"
   handler        = "lambda_sechub_hive.lambda_handler"
-  runtime        = "python3.8"
+  runtime        = "python3.9"
   create_package = false
 
   local_existing_package = "lambda_sechub_hive.zip"
